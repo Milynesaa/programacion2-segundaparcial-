@@ -71,7 +71,7 @@ Pasos de Instalación
 
 Clonar el repositorio
 
-bashgit clone   https://github.com/Milynesaa/Gestionclientes.git
+bashgit clone  https://github.com/Milynesaa/programacion2-segundaparcial-.git
 
 Abrir en Android Studio
 
