@@ -71,7 +71,7 @@ Pasos de Instalación
 
 Clonar el repositorio
 
-bashgit clone   
+bashgit clone   https://github.com/Milynesaa/Gestionclientes.git
 
 Abrir en Android Studio
 
