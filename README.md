@@ -71,8 +71,7 @@ Pasos de Instalación
 
 Clonar el repositorio
 
-bashgit clone https://github.com/tu-usuario/programacion2-segundaparcial.git
-cd programacion2-segundaparcial
+bashgit clone   
 
 Abrir en Android Studio
 
