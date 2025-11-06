@@ -1,168 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#E3F2FD"
-    android:padding="20dp">
+    android:padding="16dp"
+    tools:context=".CargaArchivosActivity">
 
-    <!-- Header Card -->
-    <androidx.cardview.widget.CardView
+    <EditText
+        android:id="@+id/etCiCliente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="16dp"
-        app:cardElevation="4dp"
-        app:cardBackgroundColor="#0288D1">
+        android:hint="Cédula del Cliente"
+        android:inputType="text" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Logs de Auditoría"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="#FFFFFF" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Registro de actividades del sistema"
-                android:textSize="14sp"
-                android:textColor="#B3E5FC"
-                android:layout_marginTop="4dp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <!-- Stats Card -->
-    <androidx.cardview.widget.CardView
+    <Button
+        android:id="@+id/btnSeleccionarArchivos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="3dp"
-        app:cardBackgroundColor="#FFFFFF">
+        android:text="Seleccionar Archivos" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="📊"
-                android:textSize="32sp"
-                android:layout_marginEnd="16dp" />
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Total de Registros"
-                    android:textSize="12sp"
-                    android:textColor="#78909C"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tvTotalLogs"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0"
-                    android:textSize="28sp"
-                    android:textStyle="bold"
-                    android:textColor="#0277BD"
-                    android:layout_marginTop="4dp" />
-            </LinearLayout>
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <!-- Action Buttons Card -->
-    <androidx.cardview.widget.CardView
+    <TextView
+        android:id="@+id/tvArchivosSeleccionados"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="3dp"
-        app:cardBackgroundColor="#FFFFFF">
+        android:layout_marginTop="16dp"
+        android:text="No hay archivos seleccionados" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp">
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnActualizar"
-                android:layout_width="0dp"
-                android:layout_height="56dp"
-                android:layout_weight="1"
-                android:text="Actualizar"
-                android:textStyle="bold"
-                app:cornerRadius="10dp"
-                app:backgroundTint="#29B6F6"
-                android:textColor="#FFFFFF"
-                android:layout_marginEnd="8dp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLimpiarLogs"
-                android:layout_width="0dp"
-                android:layout_height="56dp"
-                android:layout_weight="1"
-                android:text="Limpiar"
-                android:textStyle="bold"
-                app:cornerRadius="10dp"
-                app:backgroundTint="#E57373"
-                android:textColor="#FFFFFF"
-                android:layout_marginStart="8dp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <!-- Logs List Card -->
-    <androidx.cardview.widget.CardView
+    <Button
+        android:id="@+id/btnEnviarArchivos"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="3dp"
-        app:cardBackgroundColor="#FFFFFF">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Historial de Actividades"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:textColor="#0277BD"
-                android:padding="16dp"
-                android:background="#E1F5FE" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvLogs"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1"
-                android:padding="8dp"
-                android:clipToPadding="false" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Enviar Archivos" />
 
 </LinearLayout>

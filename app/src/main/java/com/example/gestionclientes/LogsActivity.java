@@ -38,7 +38,7 @@ public class LogsActivity extends AppCompatActivity {
     }
 
     private void initViews() {
-        tvTotalLogs = findViewById(R.id.tvTotalLogs);
+        tvTotalLogs = findViewById(R.id .tvTotalLogs);
         rvLogs = findViewById(R.id.rvLogs);
         btnActualizar = findViewById(R.id.btnActualizar);
         btnLimpiarLogs = findViewById(R.id.btnLimpiarLogs);
